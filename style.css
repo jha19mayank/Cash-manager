@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  background-color: rgb(143, 159, 255);
+  margin: 7% 20% 100px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#bill-amount {
+  padding: 5px;
+  margin: 10px;
+  border: 10px solid white;
+  border-radius: 10px;
+}
+#cash-given {
+  padding: 5px;
+  margin: 10px;
+  border: 10px solid white;
+  border-radius: 10px;
+}
