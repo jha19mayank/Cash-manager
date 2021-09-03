@@ -7,6 +7,37 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Paisa Manager</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1 class="header">Cash-Register-Manager</h1>
+      <p class="description">
+        Enter the bill amount and cash given by the customer and know minimun
+        number of notes to return.
+      </p>
+      <label for="bill-amount">Bill amount:-</label>
+      <input id="bill-amount" type="number" />
+      <label for="cash-given">Cash given:-</label>
+      <input id="cash-given" type="number" />
+      <button class="amt-rtn">Return</button>
+      <h3>Amount that has to be returned:-</h3>
+      <table>
+        <tr>
+          <th>No. of notes</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Notes</th>
+          <td>2000</td>
+          <td>500</td>
+          <td>100</td>
+          <td>20</td>
+          <td>10</td>
+          <td>1</td>
+        </tr>
+      </table>
+
+      <button class="new">Done & Clear</button>
+    </div>
+  </body>
   <script src="./main.js"></script>
 </html>
