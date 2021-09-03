@@ -1,23 +1,55 @@
+* {
+}
+
 .container {
+  background-color: rgb(143, 159, 255);
   display: flex;
   flex-direction: column;
-  width: 40rem;
-  background-color: rgb(143, 159, 255);
-  margin: 7% 20% 100px;
-  padding: 10px;
+  width: 60rem;
+  margin: 1rem auto;
+  padding: 1rem;
   text-align: center;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+input {
+  padding: 5px;
+  margin: 10px;
+  border: 10px solid white;
   border-radius: 10px;
 }
 
-#bill-amount {
-  padding: 5px;
-  margin: 10px;
-  border: 10px solid white;
-  border-radius: 10px;
+.description {
+  font-size: 20px;
+  padding: 1px;
+  font-style: italic;
 }
-#cash-given {
+
+label {
+  font-weight: bold;
+  font-size: 20px;
   padding: 5px;
-  margin: 10px;
-  border: 10px solid white;
+}
+
+button {
+  width: 10rem;
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid black;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+td,
+th {
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+th {
+  background-color: rgb(255, 101, 101);
+}
+td {
+  background-color: white;
 }
