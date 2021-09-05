@@ -3,9 +3,13 @@ const cashGiven = document.querySelector("#cash-given");
 const checkButton = document.querySelector("#amt-check");
 const errMessage = document.querySelector("#error-message");
 const nextButton = document.querySelector("#nxt");
+const cashArea = document.querySelector("cash-area");
+const givingReturn = document.querySelectorAll("return-given");
 
-hideMessage();
+const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
+
 checkButton.addEventListener("click", function validateAmounts() {
+  hideErrorMessage();
   if (billAmount.value > 0) {
     if (cashGiven.value >= billAmount.value) {
       const amountToBeReturned = cashGiven.value - billAmount.value;
@@ -18,7 +22,7 @@ checkButton.addEventListener("click", function validateAmounts() {
   }
 });
 
-function hideMessage() {
+function hideErrorMessage() {
   errMessage.style.display = "none";
 }
 
@@ -27,7 +31,20 @@ function showErrorMessage(mail) {
   errMessage.innerText = mail;
 }
 
-function calculateExhange() {}
+nextButton.addEventListener("click", () => {
+  if (billAmount.value) {
+    cashArea.style.display = "block";
+    nextButton.style.display = "none";
+  }
+});
+
+function calculateExhange(amountToBeReturned) {
+  for (let i = 0; i < availableNotes.length; i++) {
+    const numberOfNotes = math.trunc(amountToBeReturned / availableNotes[i]);
+    amountToBeReturned %= availableNotes[i];
+    givingReturn.innerText = numberOfNotes;
+  }
+}
 
 document.getElementById("rtn").addEventListener("click", newPage);
 function newPage() {
