@@ -42,12 +42,10 @@ td,
 th {
   border: 1px solid black;
   padding: 0.5rem;
-}
-
-th {
   background-color: rgb(255, 101, 101);
 }
-td {
+
+.return-given {
   background-color: white;
 }
 
